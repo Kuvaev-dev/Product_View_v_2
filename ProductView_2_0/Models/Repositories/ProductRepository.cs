@@ -18,7 +18,7 @@ namespace Product_View_v_2.Models
                 try
                 {
                     db.Open();
-                    var sql = "exec [dbo].[GetProducts]    ";
+                    var sql = "EXEC [dbo].[GetProducts]";
                     coll = db.Query<Product>(sql).ToList();
                 }
                 catch (Exception ex)
@@ -40,7 +40,7 @@ namespace Product_View_v_2.Models
                 {
                     try
                     {
-                        var sql = "exec  [dbo].[AddProducts]   @category ,@salesman , @product , @model , @description ,@price,@img  ";
+                        var sql = "EXEC [dbo].[AddProducts] @category, @salesman, @product, @model, @description ,@price,@img";
                         var values = new
                         {
                             category = value.category,
@@ -73,7 +73,7 @@ namespace Product_View_v_2.Models
                 {
                     try
                     {
-                        var sql = "exec  [dbo].[UpdateProducts] @id,   @category ,@salesman , @product , @model , @description ,@price, @img  ";
+                        var sql = "EXEC [dbo].[UpdateProducts] @id, @category, @salesman, @product, @model, @description ,@price, @img";
                         var values = new
                         {
                             id = value.id,
@@ -107,7 +107,7 @@ namespace Product_View_v_2.Models
                 {
                     try
                     {
-                        var sql = "exec  [dbo].[DellProducts] @id";
+                        var sql = "EXEC [dbo].[DellProducts] @id";
                         var values = new { id = id };
                         db.Query(sql, values, transaction);
                         transaction.Commit();

@@ -1,0 +1,23 @@
+@page
+@model Product_View_v_2.Views.Home.EditModel
+
+<h1>Редактирование записей о продукте</h1>
+<form method="get" action="/Home/EditProduct">
+    <h5>Новый продукт</h5>
+    <p>Укажите категорию</p>
+    <input type="text" name="product.category" value="@ViewBag.EditProduct.category"/>
+    <p>Укажите продавца</p>
+    <input type="text" name="product.salesman" value="@ViewBag.EditProduct.salesman"/>
+    <p>Введите продукт</p>
+    <input type="text" name="product.product" value="@ViewBag.EditProduct.product"/>
+    <p>Введите модель продукта</p>
+    <input type="text" name="product.model" value="@ViewBag.EditProduct.model"/>
+    <p>Укажите описание продукта</p>
+    <input type="text" name="product.description" value="@ViewBag.EditProduct.description"/>
+    <p>Укажите цену продукта</p>
+    <input type="number" step="any" name="product.price" value="@ViewBag.EditProduct.price"/>
+    <p>Укажите путь к картинке</p>
+    <input type="text" name="product.img" value="@ViewBag.EditProduct.img" />
+    <input type="hidden" name="product.id" value="@ViewBag.EditProduct.id">
+    <input type="submit" value="Отправить"/>
+</form>

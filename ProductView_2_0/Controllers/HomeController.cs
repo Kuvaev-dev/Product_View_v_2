@@ -30,22 +30,26 @@ namespace ProductView_2_0.Controllers
         }
 
         public IActionResult NewProduct() => View();
+        
         public IActionResult Edit(int id)
         {
             ViewBag.Edit_product = ProductRep.GetProducts().Find(i => i.id == id);
             return View();
         }
+        
         public IActionResult Del(int id)
         {
             ProductRep.Delete(id);
             return Redirect("/Home/Index");
         }
+        
         public IActionResult EditProduct(Product product)
         {
             if (CheckProduct(product))
                 ProductRep.UpdateProducts(product);
             return Redirect("/Home/Index");
         }
+        
         public IActionResult Add(Product product)
         {
             if (CheckProduct(product))
@@ -53,6 +57,7 @@ namespace ProductView_2_0.Controllers
             
             return Redirect("/Home/NewProduct");
         }
+        
         private bool CheckProduct(Product product)
         {
             bool rez = false;
@@ -66,6 +71,7 @@ namespace ProductView_2_0.Controllers
                                         rez = true;
             return rez;
         }
+        
         private bool IsUrl(string url)
         {
             bool rez;

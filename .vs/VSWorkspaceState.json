@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ProductView_2_0",
+    "\\ProductView_2_0\\Models",
+    "\\ProductView_2_0\\Models\\Repositories",
+    "\\ProductView_2_0\\Views",
+    "\\ProductView_2_0\\Views\\Home",
+    "\\ProductView_2_0\\wwwroot",
+    "\\ProductView_2_0\\wwwroot\\css",
+    "\\ProductView_2_0\\wwwroot\\js",
+    "\\ProductView_2_0\\wwwroot\\lib"
+  ],
+  "SelectedNode": "\\ProductView_2_0\\Models\\ErrorViewModel.cs",
+  "PreviewInSolutionExplorer": false
+}

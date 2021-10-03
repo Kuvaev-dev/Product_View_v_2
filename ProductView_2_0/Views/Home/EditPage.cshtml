@@ -3,20 +3,20 @@
 
 <h1>Edit product page</h1>
 <form method="get" action="/Home/EditProduct">
-    <h5>New Product :</h5>
-    <p>Category :</p>
+    <h5>New Product</h5>
+    <p>Category:</p>
     <input type="text" name="product.category" value="@ViewBag.Edit_product.category" />
-    <p>Salesman :</p>
+    <p>Salesman:</p>
     <input type="text" name="product.salesman" value="@ViewBag.Edit_product.salesman" />
-    <p>Product :</p>
+    <p>Product:</p>
     <input type="text" name="product.product" value="@ViewBag.Edit_product.product" />
-    <p>Model :</p>
+    <p>Model:</p>
     <input type="text" name="product.model" value="@ViewBag.Edit_product.model" />
-    <p>Description :</p>
+    <p>Description:</p>
     <input type="text" name="product.description" value="@ViewBag.Edit_product.description" />
-    <p>Price :</p>
+    <p>Price:</p>
     <input type="number" step="any" name="product.price" value="@ViewBag.Edit_product.price" />
-    <p>Img url :</p>
+    <p>Img url:</p>
     <input type="text" name="product.img" value="@ViewBag.Edit_product.img" />
     <input type="hidden" name="product.id" value="@ViewBag.Edit_product.id">
     <input type="submit" value="Отправить" />
